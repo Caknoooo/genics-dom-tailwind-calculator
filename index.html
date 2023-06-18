@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .calculator-container {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" class="container mx-auto mt-5">
+    <h1 class="text-2xl font-bold mb-3 text-center">Simple Calculator</h1>
+    <div class="calculator-container bg-gray-400 p-4 rounded">
+      <input id="resultInput" type="text" class="w-full mb-3 p-2 border" disabled>
+      <div class="grid grid-cols-4 gap-2">
+        <button class="col-span-2 bg-blue-500 text-white p-2 rounded" onclick="appendToInput('7')">7</button>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="appendToInput('8')">8</button>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="appendToInput('9')">9</button>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="appendToInput('+')">+</button>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="appendToInput('4')">4</button>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="appendToInput('5')">5</button>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="appendToInput('6')">6</button>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="appendToInput('-')">-</button>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="appendToInput('1')">1</button>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="appendToInput('2')">2</button>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="appendToInput('3')">3</button>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="appendToInput('*')">*</button>
+        <button class="col-span-2 bg-blue-500 text-white p-2 rounded" onclick="appendToInput('0')">0</button>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="appendToInput('.')">.</button>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="calculateResult()">=</button>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="appendToInput('/')">/</button>
+        <button class="col-span-4 bg-red-500 text-white p-2 rounded" onclick="clearInput()">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
